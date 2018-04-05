@@ -125,6 +125,15 @@ class Mine extends Controller
         return view('album', [ 'album'=>$album]);
     }
 
+    public function photo($id)
+    {
+        $photo= Photo::find($id);
+
+        if($photo == false) abort(404);
+
+        return view('photo', [ 'photo'=>$photo]);
+    }
+
     public function utilisateur($id){
         $utilisateur = User::find($id);
 

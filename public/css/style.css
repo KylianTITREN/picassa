@@ -253,10 +253,47 @@ header{
     margin-top: 60px;
 }
 
+.publication_photo{
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    grid-auto-rows: 350px;
+    grid-gap: 40px;
+    margin-top: 70px;
+}
+
+.publication_photo strong{
+    font-size: 30px;
+    font-weight: bold;
+    color: #D0D0D0;
+}
+
 .publications_album strong{
     font-size: 34px;
     font-weight: bold;
-    color: #D0D0D0;
+    color: #d0d0d0;
+}
+
+.show-memmbers{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.show-memmbers a{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #929292;
+}
+
+.show-memmbers .profilpic{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 5px 15px;
 }
 
 .publications_album hr{

@@ -6,12 +6,26 @@
         .addPic{display: none;}
     </style>
 
-    <h3>Utilisateurs</h3>
-    <ul>
+    <form id="search" data-pjax>
+        <input type="search" name="search" placeholder="Rechercher" required>
+        <input type="submit" style="display: none">
+    </form>
+
+    <div class="publications_album">
+        <strong class='publication_title'>
+            Utilisateurs
+
+            <mark>{{count($utilisateur)}}</mark>
+
+        </strong>
+
+        <hr>
+
+        <div class="show-memmbers">
     @foreach($utilisateur as $u)
-            <li><a href="/utilisateur/{{$u->id}}" data-pjax>{{$u->name}}</a></li>
+            <a href="/utilisateur/{{$u->id}}" data-pjax><div class="profilpic" style="background-image: url('/uploads/avatar/{{ $u->avatar }}'); background-size: cover; background-position: center;"></div>{{$u->name}}</a>
     @endforeach
-    </ul>
+        </div>
 
     @include('_album',['albums'=>$albums])
 

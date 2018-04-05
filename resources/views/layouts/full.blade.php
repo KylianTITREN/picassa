@@ -82,6 +82,8 @@
 
         </div>
 
+        <footer style="width: 100%; margin: auto; text-align: center; color: #68D3C8; font-weight: bold; padding: 30px 0;">© 2018 PICASSA</footer>
+
     <!-- Scripts -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/jquery.pjax.js') }}"></script>

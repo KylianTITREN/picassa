@@ -12,23 +12,13 @@
 
         @foreach($photo->sortByDesc('updated_at') as $c)
 
-            <a href="#" class="cover" style="margin-bottom: 40px;" data-pjax>
+            <a href="/photo/{{$c->id}}" class="cover" style="margin-bottom: 40px;" data-pjax>
 
                 <div style='height: 100%; width: 100%; margin-bottom: 20px;background-image: url("{{$c->photo}}"); background-size: cover; background-position: center;'>
 
                 </div>
 
                 <strong><mark>{{$c->title}}</mark></strong>
-
-                <!--
-
-                @if($c->utilisateur->id != Auth::id())
-
-            @else
-                <a href="{{ url('/deletephoto/'.$c->id) }}" data-pjax-toggle>Supprimer</a>
-                    @endif
-
-                -->
 
             </a>
         @endforeach

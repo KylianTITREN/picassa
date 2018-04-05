@@ -21,12 +21,6 @@
 
             <strong><mark>{{$m->name}} </mark>({{count($m->photo)}})</strong>
 
-        <!-- @if($m->utilisateur->id != Auth::id())
-
-        @else
-            <a href="{{ url('/deletealbum/'.$m->id) }}" data-pjax-toggle>Supprimer</a>
-        @endif -->
-
         </a>
     @endforeach
 

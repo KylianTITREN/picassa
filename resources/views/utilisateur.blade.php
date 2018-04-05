@@ -16,6 +16,7 @@
 
     .user .profilpic2:hover span{
         opacity: 0.5!important;
+        cursor: pointer;
     }
 
     </style>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Album;
 use App\Photo;
 use App\User;
+use Illuminate\Support\Facades\URL;
 use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -111,7 +112,7 @@ class Mine extends Controller
         Album::where('id', $id)->delete();
         Photo::where('album_id', $id)->delete();
 
-        return back();
+        return redirect('/');
 
     }
 

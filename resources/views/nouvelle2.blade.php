@@ -5,6 +5,11 @@
     <style>
         .create div:hover .choose_picture{
             filter: brightness(0.6);
+            cursor: pointer;
+        }
+
+        .create div:hover small{
+            cursor : pointer;
         }
     </style>
 

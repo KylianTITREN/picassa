@@ -12,6 +12,12 @@
 
         </strong>
 
+        @if($album->utilisateur->id != Auth::id())
+
+    @else
+        <a href="{{ url('/deletealbum/'.$album->id) }}" data-pjax-toggle>Supprimer</a>
+        @endif
+
         <hr style="display: block!important;">
 
         <small>Publié par <a href="/utilisateur/{{$album->utilisateur->id}}" style="font-weight: bold; color: #68D3C8;">{{$album->utilisateur->name}}</a></small>

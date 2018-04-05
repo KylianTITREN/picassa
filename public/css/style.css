@@ -259,6 +259,7 @@ header{
     grid-auto-rows: 350px;
     grid-gap: 40px;
     margin-top: 70px;
+    padding-bottom: 430px;
 }
 
 .publication_photo strong{

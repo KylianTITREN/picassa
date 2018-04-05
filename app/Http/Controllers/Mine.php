@@ -103,7 +103,7 @@ class Mine extends Controller
 
         Photo::where('id', $id)->delete();
 
-        return back();
+        return redirect('/');
 
     }
 

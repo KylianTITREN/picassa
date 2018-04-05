@@ -1,0 +1,310 @@
+@font-face {
+    font-family: "SignPainter";
+    src: url('../font/SignPainter-HouseScript.ttf') format("truetype");
+}
+
+
+body{
+    font-family: 'Avenir', sans-serif;
+    font-weight: 300;
+    background-color: white;
+}
+
+a{
+    color:inherit;                  /* HERITE COLOR PARENT */
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.my-btn, .my-btn2{
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 50px;
+}
+
+.user-counter mark, .publications_album mark{
+    color:#68D3C8;
+    background-color: inherit;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.container{                         /* CENTRER 1200px MAX */
+    max-width: 1200px;
+    margin: 0 auto;                 /* CENTRAGE HORIZONTAL */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+}
+
+.startpage{
+    height: 80vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.startpage .my-btn{
+    background: linear-gradient(to top, rgba(117,210,174,0.5), #68D3C8);
+}
+
+.startpage strong{
+    font-family: 'SignPainter';
+    color: #68D3C8;
+    font-size: 180px;
+    font-weight: bold;
+    margin-top: -40px;
+}
+
+.startpage form{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.startpage form input{
+    border: none;
+    border-bottom: 2px solid #68D3C8!important;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.startpage form button{
+    margin-top: 30px;
+}
+
+.startpage form input:focus{
+    outline: none;
+}
+
+.startpage p{
+    color:#68D3C8;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+#albums{
+    border: none;
+    background-color: #69D9C3;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+}
+
+#albums{
+    outline: none;
+}
+
+#description_album{
+    border: 2px solid #69D9C3;
+    padding: 10px;
+}
+
+#description_album:focus{
+    outline: none;
+}
+
+.create{
+    margin-top: 60px!important;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-around;
+    width: 500px;
+    margin: auto;
+}
+
+.create .element_input{
+    border: none;
+    border-bottom: 2px solid #68D3C8!important;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.create .element_input:focus{
+    outline: none;
+}
+
+.create .my-btn{
+    background: linear-gradient(to top, rgba(117,210,174,0.5), #68D3C8);
+
+}
+
+.brand-name{
+    display: flex;
+    align-items: center;
+}
+
+.brand-name p{
+    font-family: 'SignPainter';
+    color: #68D3C8;
+    font-size: 58px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.connected-space{
+    display: flex;
+    align-items: center;
+}
+
+.connected-space .my-btn{
+    background: linear-gradient(to top, rgba(117,210,174,0.5), #68D3C8);
+}
+
+.connected-name a{
+    color: grey;
+    font-size: 24px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.connected-name .profilpic{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.user {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.user .profilpic2{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+
+.choos_pic{
+    display: none;
+    background: linear-gradient(to bottom, #66be5c, rgba(25, 190, 99, 0.58));
+    border-radius: 50%;
+    border: none;
+    color: white;
+    width: 40px;
+    height:40px;
+    margin-left: 10px;
+}
+
+.user-info{
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info strong{
+    font-size: 52px;
+    font-weight: 900;
+    color: #A09E9E;
+    padding-bottom: 20px;
+}
+
+.user-counter{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-counter small{
+    color: #D0D0D0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.user-edit{
+    margin: 30px 10px;
+    display: flex;
+}
+
+.user-edit .my-btn{
+    background: linear-gradient(to top, rgba(206,117,117,0.5), #D36868);
+}
+
+.user-edit .my-btn2{
+    background: linear-gradient(to top, rgba(117,210,174,0.5), #68D3C8);
+}
+
+.publications_album{
+    margin-top: 60px;
+}
+
+.publications_album strong{
+    font-size: 34px;
+    font-weight: bold;
+    color: #D0D0D0;
+}
+
+.publications_album hr{
+    background-color: #D0D0D0;
+    width: 400px;
+    margin-left: 0;
+}
+
+.publication_show{
+    margin: 50px 0;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 350px;
+    grid-gap: 40px;
+    transition: .5s all ease;
+}
+
+.publication_show .cover:hover div{
+    filter: brightness(0.6);
+    transition: .5s all ease;
+}
+
+.publication_show strong{
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.publication_show strong mark{
+    font-size: 22px;
+}
+
+#search{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#search input{
+    border-bottom: 2px solid #68D3C8!important;
+    border: none;
+    text-align: right;
+    padding: 10px 20px;
+    margin-right: 20px;
+}
+
+#search input:focus{
+    outline: none;
+}
+
+

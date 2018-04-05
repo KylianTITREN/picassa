@@ -34,7 +34,7 @@
 
         <input id="password-confirm" type="password" class="form-control" placeholder="Confirmer mot de passe" name="password_confirmation" required>
 
-        <button type="submit" class="my-btn">Inscription</button>
+        <button type="submit" class="my-btn" style="cursor: pointer;">Inscription</button>
 
     </form>
 </div>

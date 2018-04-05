@@ -28,7 +28,7 @@
                             <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Se souvenir de moi
                         </label>
 
-                        <button type="submit" class="my-btn">Connexion</button>
+                        <button type="submit" class="my-btn" style="cursor: pointer;">Connexion</button>
 
                     </form>
 </div>

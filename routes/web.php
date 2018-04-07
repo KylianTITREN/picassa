@@ -18,6 +18,7 @@ Route::post('/creer', 'Mine@creer')->middleware('auth');
 Route::post('/creeralbum', 'Mine@creeralbum')->middleware('auth');
 Route::get('/utilisateur/{id}','Mine@utilisateur')->where('id','[0-9]+');
 Route::post('/utilisateur', 'Mine@update_avatar');
+Route::post('/abonnements/{id}', 'Mine@abonnements')->where('id','[0-9]+');
 Route::get('/album/{id}','Mine@album')->where('id','[0-9]+');
 Route::get('/photo/{id}','Mine@photo')->where('id','[0-9]+');
 Route::get('/suivi/{id}','Mine@suivi')->middleware('auth')->where('id','[0-9]+');

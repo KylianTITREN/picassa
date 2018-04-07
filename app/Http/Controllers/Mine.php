@@ -143,6 +143,15 @@ class Mine extends Controller
         return view('utilisateur', ['utilisateur'=>$utilisateur]);
     }
 
+    public function abonnements($id){
+        $utilisateur = User::find($id);
+
+        if($utilisateur==false)
+            abort('404');
+
+        return view('abonnement');
+    }
+
     public function suivi($id){
         $utilisateur = User::find($id);
 

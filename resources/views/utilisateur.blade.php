@@ -34,12 +34,12 @@
 
             <div class="user-counter">
                 <small>
-                    <mark>{{count($utilisateur->follow)}}</mark>
+                    <a href="/abonnements/{{$utilisateur->id}}"><mark>{{count($utilisateur->follow)}}</mark>
                     @if(count($utilisateur->follow)>1)
                         abonnements
                     @else
                         abonnement
-                    @endif
+                    @endif</a>
                 </small>
 
                 <small>

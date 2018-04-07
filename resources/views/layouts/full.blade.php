@@ -75,7 +75,7 @@
 
             @guest
 
-                    <button class="my-btn show_register"><a href="{{route('register')}}">Inscription</a></button>
+                        <a href="{{route('register')}}" style="cursor: pointer;"><button class="my-btn show_register">Inscription</button></a>
                 </div>
 
                 @endguest

@@ -36,7 +36,8 @@
             <small style="margin-left: 30px; font-size: 20px;">Ajouter une photo</small>
         </div>
 
-        <select name="albums" id="albums">
+        <select name="albums" size="1" id="albums">
+            <option value="" disabled selected>Albums :</option>
             @foreach($albums as $m)
                 <option value="{{$m->id}}">{{$m->name}}</option>
             @endforeach

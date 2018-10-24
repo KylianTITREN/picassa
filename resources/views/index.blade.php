@@ -6,8 +6,9 @@
 
         @else
 
-    <form id="search" data-pjax>
-        <input type="search" name="search" placeholder="Rechercher" required>
+    <form id="search">
+        <input type="search" name="recherche" placeholder="Rechercher" required>
+
         <input type="submit" style="display: none">
     </form>
 

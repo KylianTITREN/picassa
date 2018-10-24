@@ -40,7 +40,7 @@
 
                     @auth
 
-                    <button class="my-btn"><a href="/nouvelle" data-pjax>Publier</a></button>
+                                <a href="/nouvelle" style="cursor: pointer;" data-pjax><button class="my-btn">Publier</button></a>
 
                     @endauth
 

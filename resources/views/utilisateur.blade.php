@@ -2,6 +2,20 @@
 
 @section('content')
 
+    <style>
+        .input-name{
+            border:none;
+            font-weight: bold;
+            color: #A09E9E;
+            width: 12ch;
+        }
+
+        .input-name:focus{
+            outline: none;
+            border-bottom: 1px solid #b4b4b4;
+        }
+    </style>
+
     @if($utilisateur->id != Auth::id())
 
         <style>
@@ -14,10 +28,10 @@
 
     <style>
 
-    .user .profilpic2:hover span{
-        opacity: 0.5!important;
-        cursor: pointer;
-    }
+        .user .profilpic2:hover span{
+            opacity: 0.5!important;
+            cursor: pointer;
+        }
 
     </style>
 
@@ -30,16 +44,23 @@
         </div>
 
         <div class="user-info">
-            <strong>{{$utilisateur->name}}</strong>
+            @if($utilisateur->id != Auth::id())
+                <strong>{{$utilisateur->name}}</strong>
+            @else
+                <form enctype="multipart/form-data" action="/utilisateur" method="POST" style="display: flex">
+                    <strong><input class="input-name" type="text" name="name" id="name" value="{{$utilisateur->name}}" placeholder="{{$utilisateur->name}}"></strong>
+                    <input type="submit" style="display: none;">
+                </form>
+            @endif
 
             <div class="user-counter">
                 <small>
-                    <a href="/abonnements/{{$utilisateur->id}}"><mark>{{count($utilisateur->follow)}}</mark>
+                    <mark>{{count($utilisateur->follow)}}</mark>
                     @if(count($utilisateur->follow)>1)
                         abonnements
                     @else
                         abonnement
-                    @endif</a>
+                    @endif
                 </small>
 
                 <small>
@@ -82,7 +103,7 @@
 
             <form enctype="multipart/form-data" action="/utilisateur" method="POST" >
                 <input type="file" id="fileInput" name="avatar" style="display: none;" />
-                <input type="hidden" name="_token" value="{{ csrf_token() }}"style="display: none;" >
+                <input type="hidden" name="_token" value="{{ csrf_token() }}" style="display: none;" >
                 <input type="submit" class="choos_pic" value="√">
             </form>
 

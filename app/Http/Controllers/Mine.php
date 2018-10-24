@@ -94,6 +94,13 @@ class Mine extends Controller
             $utilisateur->save();
         }
 
+        if($request->has('name')){
+            $utilisateur = Auth::user();
+            $utilisateur->update([
+                'name' => $request->input('name')
+            ]);
+        }
+
         return view('utilisateur', array('utilisateur' => Auth::user()) );
 
     }
@@ -141,15 +148,6 @@ class Mine extends Controller
             abort('404');
 
         return view('utilisateur', ['utilisateur'=>$utilisateur]);
-    }
-
-    public function abonnements($id){
-        $utilisateur = User::find($id);
-
-        if($utilisateur==false)
-            abort('404');
-
-        return view('abonnement');
     }
 
     public function suivi($id){
